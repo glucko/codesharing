@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+
+  <body>
+        <nav>
+            <ul>
+                <li>Code Sharing</li>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('create')}}">Create</a></li>
+            </ul>
+            {% block content %} {% endblock %}
+        </nav>
+    </body>
+</html>

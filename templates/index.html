@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>
+    {% block title %} View Posts {% endblock %}
+</h2>
+
+<div>
+    {% for post in posts %}
+        <pre><code>{{post['content']}}</code></pre>
+    {% endfor %}
+</div>
+<style>
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+    }
+</style>
+{% endblock %}
