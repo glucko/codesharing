@@ -1,9 +1,10 @@
 from flask import render_template, request, redirect, url_for, flash, Flask
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'eriy02935234ohpjhdskvhxc070621234'
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY'] or 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 
